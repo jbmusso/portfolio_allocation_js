@@ -7,7 +7,7 @@
   "description": "A JavaScript library to allocate and optimize portfolios of financial instruments.",
   "license": "MIT",
   "directories": {
-    "lib": "lib",
+    "lib": "src",
     "test": "tests"
   },
   "keywords": [
@@ -34,7 +34,7 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "lib"
+    "src"
   ],
   "engines": {
     "node": ">=10"
