@@ -21,21 +21,45 @@
     "url": "https://github.com/lequant40/portfolio_allocation_js.git"
   },
   "devDependencies": {
+    "@types/jest": "^25.2.1",
     "grunt": "^1.0.4",
+    "grunt-cli": "^1.3.2",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-qunit": "^3.1.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-replace": "^1.0.1",
-    "grunt-strip-code": "^1.0.6"
+    "grunt-strip-code": "^1.0.6",
+    "prettier": "^2.0.4",
+    "tsdx": "^0.13.1",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
   },
   "bugs": {
     "url": "https://github.com/lequant40/portfolio_allocation_js/issues"
   },
-  "main": "dist/portfolio_allocation.dist.min.js",
-  "scripts": {
-    "test": "grunt test"
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=10"
   },
-  "dependencies": {
-    
-  }
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint lib",
+    "prepare": "tsdx build",
+    "test:front": "grunt test"
+  },
+  "dependencies": {},
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/mylib.esm.js"
 }
